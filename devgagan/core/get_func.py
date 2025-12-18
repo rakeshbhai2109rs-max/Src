@@ -736,7 +736,7 @@ def format_caption(original_caption, sender, custom_caption):
     original_caption = re.sub(r'#\S+', '', original_caption)
 
     # ✅ Replace @mentions
-    original_caption = re.sub(r'@\w+', '@Chosen_Onex', original_caption)
+    original_caption = re.sub(r'@\w+', '𝗥𝗼𝗰𝗸𝘆 ⚝', original_caption)
 
     # ✅ Replace telegram links
     original_caption = re.sub(
@@ -1253,7 +1253,7 @@ async def rename_file(file, sender, caption=None):
     base_name = os.path.basename(base_name)
 
     # Apply text transformations
-    base_name = re.sub(r'@\w+', '@Chosen_Onex', base_name)  # Replace mentions
+    base_name = re.sub(r'@\w+', '𝗥𝗼𝗰𝗸𝘆 ⚝', base_name)  # Replace mentions
     for word in delete_words:
         base_name = base_name.replace(word, "")  # Remove banned words
     for word, replace_word in replacements.items():
