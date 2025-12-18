@@ -747,11 +747,12 @@ def format_caption(original_caption, sender, custom_caption):
 
     # ✅ Replace "Extracted By" with custom credit    
     original_caption = re.sub(
-        r'(📩)?\s*(Extracted[\s_]*By)\s*[:➤>–\-]*\s*.*\n\n',        
-        r'**❉ Sᴛꪮʟᴇɴ Hᴀᴘᴘɪɴᴇss**',
+        r'(📩)?\s*(Extracted[\s_]*By)\s*[:➤>–\-]*\s*.*',
+        r'\g<0>\n\n**❉ Sᴛꪮʟᴇɴ Hᴀᴘᴘɪɴᴇss**',
         original_caption,
         flags=re.IGNORECASE
     )
+
 
 
 
