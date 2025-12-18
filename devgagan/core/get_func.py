@@ -655,7 +655,7 @@ async def send_media_message(app, target_chat_id, msg, caption, topic_id):
             # If caption exists → keep it same, just replace links if needed
             caption = re.sub(
                 r'https?://t\.me/[^\s]+|https?://telegram\.me/[^\s]+',
-                'https://t.me/+7R-7p7jVoz9mM2M1',
+                'CHOSEN ONE ⚝',
                 caption
             )
         elif file_name:
@@ -741,7 +741,7 @@ def format_caption(original_caption, sender, custom_caption):
     # ✅ Replace telegram links
     original_caption = re.sub(
         r'https?://(t\.me|telegram\.me)/[^\s]+',
-        'https://t.me/+7R-7p7jVoz9mM2M1',
+        '⚝',
         original_caption
     )
 
