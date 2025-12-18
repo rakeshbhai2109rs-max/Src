@@ -736,7 +736,7 @@ def format_caption(original_caption, sender, custom_caption):
     original_caption = re.sub(r'#\S+', '', original_caption)
 
     # ✅ Replace @mentions
-    original_caption = re.sub(r'@\w+', '𝗥𝗼𝗰𝗸𝘆 ⚝', original_caption)
+    original_caption = re.sub(r'@\w+', '⚝', original_caption)
 
     # ✅ Replace telegram links
     original_caption = re.sub(
@@ -747,8 +747,7 @@ def format_caption(original_caption, sender, custom_caption):
 
     # ✅ Replace "Extracted By" with custom credit    
     original_caption = re.sub(
-        r'(📩)?\s*(Extracted[\s_]*By)\s*[:➤>–\-]*\s*.*',
-        
+        r'(📩)?\s*(Extracted[\s_]*By)\s*[:➤>–\-]*\s*.*\n\n',        
         r'**❉ Sᴛꪮʟᴇɴ Hᴀᴘᴘɪɴᴇss**',
         original_caption,
         flags=re.IGNORECASE
@@ -1253,7 +1252,7 @@ async def rename_file(file, sender, caption=None):
     base_name = os.path.basename(base_name)
 
     # Apply text transformations
-    base_name = re.sub(r'@\w+', '𝗥𝗼𝗰𝗸𝘆 ⚝', base_name)  # Replace mentions
+    base_name = re.sub(r'@\w+', '⚝', base_name)  # Replace mentions
     for word in delete_words:
         base_name = base_name.replace(word, "")  # Remove banned words
     for word, replace_word in replacements.items():
